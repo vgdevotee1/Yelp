@@ -17,6 +17,8 @@ class Business: NSObject {
     let ratingImage: UIImage?
     let reviewCount: NSNumber?
     
+    
+    
     init(dictionary: NSDictionary) {
         name = dictionary["name"] as? String
         
@@ -65,31 +67,31 @@ class Business: NSObject {
         let rating = dictionary["rating"] as? Double
         if rating != nil {
             switch rating {
-                case 1:
+                case 1.0?:
                     self.ratingImage = UIImage(named: "stars_1")
                     break
-                case 1.5:
+                case 1.5?:
                     self.ratingImage = UIImage(named: "stars_1half")
                     break
-                case 2:
+                case 2.0?:
                     self.ratingImage = UIImage(named: "stars_2")
                     break
-                case 2.5:
+                case 2.5?:
                     self.ratingImage = UIImage(named: "stars_2half")
                     break
-                case 3:
+                case 3.0?:
                     self.ratingImage = UIImage(named: "stars_3")
                     break
-                case 3.5:
+                case 3.5?:
                     self.ratingImage = UIImage(named: "stars_3half")
                     break
-                case 4:
+                case 4.0?:
                     self.ratingImage = UIImage(named: "stars_4")
                     break
-                case 4.5:
+                case 4.5?:
                     self.ratingImage = UIImage(named: "stars_4half")
                     break
-                case 5:
+                case 5.0?:
                     self.ratingImage = UIImage(named: "stars_5")
                     break
                 default:
